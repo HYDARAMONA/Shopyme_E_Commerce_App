@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, // to remove the debug banner
       title: 'Shopyme',
       theme: AppThemes().lightTheme,
-      darkTheme: AppThemes().darkTheme,
-      themeMode: ThemeMode.system,
+      // darkTheme: AppThemes().darkTheme,
+      // themeMode: ThemeMode.system,
       // home: SplashScreen(),
       initialRoute: SplashScreen.routNamge,
       routes: routes,

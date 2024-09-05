@@ -1,3 +1,4 @@
+import 'package:e_commerce/components/global_button.dart';
 import 'package:e_commerce/screens/signIn/signin_screen.dart';
 import 'package:e_commerce/screens/splash/components/splash_content.dart';
 import 'package:e_commerce/size_config.dart';
@@ -15,7 +16,7 @@ class _BodyState extends State<Body> {
   final List<Map<String, String>> splashData = [
     {"text": "Welcome to Shopyme, Let's shop!", "image": "assets/images/2.png"},
     {
-      "text": "We help people connect to the stoer \naround the country",
+      "text": "We help people connect to the store \naround the country",
       "image": "assets/images/1.png"
     },
     {
@@ -67,24 +68,11 @@ class _BodyState extends State<Body> {
                       ),
                     ),
                     Spacer(flex: 2),
-                    SizedBox(
-                      height: getProportionateScreenHeight(56),
-                      width: double.infinity,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            foregroundColor:
-                                Theme.of(context).colorScheme.onPrimary,
-                            backgroundColor:
-                                Theme.of(context).colorScheme.primary),
-                        onPressed: () {
-                          Navigator.pushNamed(context, SignInScreen.routeName);
-                        },
-                        child: Text(
-                          'Continue',
-                          style: TextStyle(
-                              fontSize: getProportionateScreenWidth(18)),
-                        ),
-                      ),
+                    GlobalUseButton(
+                      text: 'Continue',
+                      function: () {
+                        Navigator.pushNamed(context, SignInScreen.routeName);
+                      },
                     ),
                     Spacer(flex: 2),
                   ],

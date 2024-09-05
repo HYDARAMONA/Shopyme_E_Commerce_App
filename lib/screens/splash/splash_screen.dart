@@ -9,8 +9,8 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(
-        context); // this must be called to initialize the values in the SizeConfig file
+    // the under line must be called to initialize the values in the SizeConfig file
+    SizeConfig().init(context);
     return Scaffold(
       // backgroundColor: Colors.white,
       body: Body(),
