@@ -30,7 +30,13 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
             SizedBox(height: getProportionateScreenHeight(30)),
             FormErrors(errors: errors),
             SizedBox(height: SizeConfig.screenHeight! * 0.1),
-            GlobalUseButton(text: 'Continue', function: () {}),
+            GlobalUseButton(
+                text: 'Continue',
+                function: () {
+                  if (_formKey.currentState!.validate()) {
+                    // do something when in action
+                  }
+                }),
             SizedBox(height: SizeConfig.screenHeight! * 0.1),
             DontHaveAccountText(function: () {}),
           ],

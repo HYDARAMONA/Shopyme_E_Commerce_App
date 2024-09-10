@@ -32,13 +32,25 @@ class AppThemes {
       floatingLabelBehavior: FloatingLabelBehavior.always,
       contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
       enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(28),
-          borderSide: BorderSide(color: Colors.grey),
-          gapPadding: 10),
+        borderRadius: BorderRadius.circular(28),
+        borderSide: BorderSide(color: Colors.grey),
+        gapPadding: 10,
+      ),
       focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(28),
-          borderSide: BorderSide(color: Colors.grey),
-          gapPadding: 10),
+        borderRadius: BorderRadius.circular(28),
+        borderSide: BorderSide(color: Colors.deepPurple),
+        gapPadding: 10,
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(28),
+        borderSide: BorderSide(color: Colors.red),
+        gapPadding: 10,
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(28),
+        borderSide: BorderSide(color: Colors.red),
+        gapPadding: 10,
+      ),
     );
   }
 
