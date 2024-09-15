@@ -1,5 +1,5 @@
 import 'package:e_commerce/components/global_social_card.dart';
-import 'package:e_commerce/signUp/components/signup_form.dart';
+import 'package:e_commerce/screens/signUp/components/signup_form.dart';
 import 'package:e_commerce/size_config.dart';
 import 'package:flutter/material.dart';
 

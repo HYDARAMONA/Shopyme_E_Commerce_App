@@ -1,4 +1,4 @@
-import 'package:e_commerce/signUp/components/body.dart';
+import 'package:e_commerce/screens/signUp/components/body.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatelessWidget {

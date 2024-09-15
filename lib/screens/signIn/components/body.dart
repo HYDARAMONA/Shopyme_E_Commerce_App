@@ -1,7 +1,7 @@
 import 'package:e_commerce/components/global_noaccount_text.dart';
 import 'package:e_commerce/components/global_social_card.dart';
 import 'package:e_commerce/screens/signIn/components/signin_form.dart';
-import 'package:e_commerce/signUp/signup_screen.dart';
+import 'package:e_commerce/screens/signUp/signup_screen.dart';
 import 'package:e_commerce/size_config.dart';
 import 'package:flutter/material.dart';
 
