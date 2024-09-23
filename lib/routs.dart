@@ -1,3 +1,4 @@
+import 'package:e_commerce/screens/complete_profile/complete_profile_screen.dart';
 import 'package:e_commerce/screens/forgotPassword/forgot_pass_screen.dart';
 import 'package:e_commerce/screens/signIn/signin_screen.dart';
 import 'package:e_commerce/screens/splash/splash_screen.dart';
@@ -9,4 +10,5 @@ final Map<String, WidgetBuilder> routes = {
   SignInScreen.routeName: (context) => SignInScreen(),
   ForgotPasswordScreen.routNamge: (context) => ForgotPasswordScreen(),
   SignupScreen.routeName: (context) => SignupScreen(),
+  CompleteProfileScreen.routNamge: (context) => CompleteProfileScreen(),
 };

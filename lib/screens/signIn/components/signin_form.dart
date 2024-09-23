@@ -21,6 +21,22 @@ class _SignInFormState extends State<SignInForm> {
   String? password;
   bool? checkBoxValue = false;
 
+  void addErr({required String? error}) {
+    if (!errors.contains(error)) {
+      setState(() {
+        errors.add(error!);
+      });
+    }
+  }
+
+  void removeErr({required String? error}) {
+    if (errors.contains(error)) {
+      setState(() {
+        errors.remove(error!);
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -68,31 +84,26 @@ class _SignInFormState extends State<SignInForm> {
     return TextFormField(
       onSaved: (newValue) => password == newValue,
       onChanged: (value) {
-        if (value.isNotEmpty && errors.contains(kNullPassError)) {
-          setState(() {
-            errors.remove(kNullPassError);
-          });
-        } else if (value.length >= 8 && errors.contains(kShortPassError)) {
-          setState(() {
-            errors.remove(kShortPassError);
-          });
+        if (value.isNotEmpty) {
+          removeErr(error: kNullPassError);
+        }
+        if (value.length >= 8) {
+          removeErr(error: kShortPassError);
         }
         return;
       },
+      autovalidateMode: AutovalidateMode.onUnfocus,
       validator: (value) {
-        if ((value == null || value.isEmpty) &&
-            !errors.contains(kNullPassError)) {
-          setState(() {
-            errors.add(kNullPassError);
-          });
+        if ((value == null || value.isEmpty)) {
+          addErr(error: kNullPassError);
+
           return '';
-        } else if (value!.length < 8 && !errors.contains(kShortPassError)) {
-          setState(() {
-            errors.add(kShortPassError);
-          });
+        } else if (value.length < 8) {
+          addErr(error: kShortPassError);
+
           return '';
         }
-        return '';
+        return null;
       },
       obscureText: true,
       decoration: const InputDecoration(
@@ -107,32 +118,29 @@ class _SignInFormState extends State<SignInForm> {
     return TextFormField(
       onSaved: (newValue) => email = newValue,
       onChanged: (value) {
-        if ((value.isNotEmpty) && errors.contains(kEmialNullError)) {
-          setState(() {
-            errors.remove(kEmialNullError);
-          });
-        } else if (kEmailVlidatorRegEx.hasMatch(value) &&
-            errors.contains(kInvalidEmailError)) {
-          setState(() {
-            errors.remove(kInvalidEmailError);
-          });
+        if ((value.isNotEmpty)) {
+          removeErr(error: kEmialNullError);
         }
+
+        if (kEmailVlidatorRegEx.hasMatch(value)) {
+          removeErr(error: kInvalidEmailError);
+        }
+
         return;
       },
+      autovalidateMode: AutovalidateMode.onUnfocus,
       validator: (value) {
-        if ((value == null || value.isEmpty) &&
-            !errors.contains(kEmialNullError)) {
-          setState(() {
-            errors.add(kEmialNullError);
-          });
+        if (value == null || value.isEmpty) {
+          addErr(error: kEmialNullError);
+
           return '';
-        } else if (!kEmailVlidatorRegEx.hasMatch(value!) &&
-            !errors.contains(kInvalidEmailError)) {
-          setState(() {
-            errors.add(kInvalidEmailError);
-          });
+        } else if (!kEmailVlidatorRegEx.hasMatch(value)) {
+          addErr(error: kInvalidEmailError);
+
+          return '';
         }
-        return '';
+
+        return null;
       },
       keyboardType: TextInputType.emailAddress,
       decoration: const InputDecoration(
