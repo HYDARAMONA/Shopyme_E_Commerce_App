@@ -28,6 +28,7 @@ class AppThemes {
 
   static InputDecorationTheme inputDecorationTheme() {
     return InputDecorationTheme(
+      labelStyle: TextStyle(fontSize: 20),
       suffixIconColor: Colors.grey,
       floatingLabelBehavior: FloatingLabelBehavior.always,
       contentPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
@@ -38,7 +39,7 @@ class AppThemes {
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(28),
-        borderSide: BorderSide(color: Colors.deepPurple),
+        borderSide: BorderSide(color: Colors.deepPurple, width: 1.5),
         gapPadding: 10,
       ),
       errorBorder: OutlineInputBorder(
@@ -48,7 +49,7 @@ class AppThemes {
       ),
       focusedErrorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(28),
-        borderSide: BorderSide(color: Colors.red),
+        borderSide: BorderSide(color: Colors.red, width: 2),
         gapPadding: 10,
       ),
     );

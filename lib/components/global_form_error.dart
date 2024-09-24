@@ -14,7 +14,10 @@ class FormErrors extends StatelessWidget {
     return Column(
       children: List.generate(
         errors.length,
-        (index) => errorElement(errors[index]),
+        (index) => Padding(
+          padding: const EdgeInsets.symmetric(vertical: 2),
+          child: errorElement(errors[index]),
+        ),
       ),
     );
   }
