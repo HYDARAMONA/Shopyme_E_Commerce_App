@@ -25,13 +25,9 @@ class PopularProducts extends StatelessWidget {
             children: [
               ...List.generate(
                 demoProducts.length,
-                (index) => Padding(
-                  padding:
-                      EdgeInsets.only(left: getProportionateScreenWidth(20)),
-                  child: ProductCard(
-                    //Product card is a Global Component//
-                    product: demoProducts[index],
-                  ),
+                (index) => ProductCard(
+                  //Product card is a Global Component//
+                  product: demoProducts[index],
                 ),
               ),
               SizedBox(width: getProportionateScreenWidth(20)),
