@@ -1,5 +1,6 @@
 import 'package:e_commerce/components/global_button.dart';
 import 'package:e_commerce/constants.dart';
+import 'package:e_commerce/screens/home/home_screen.dart';
 import 'package:e_commerce/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -121,7 +122,9 @@ class _OtpFormState extends State<OtpForm> {
           SizedBox(height: SizeConfig.screenHeight! * 0.2),
           GlobalUseButton(
             text: 'Continue',
-            function: () {},
+            function: () {
+              Navigator.pushNamed(context, HomeScreen.routNamge);
+            },
           ),
           SizedBox(height: SizeConfig.screenHeight! * 0.1),
           TextButton(

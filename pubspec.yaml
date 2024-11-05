@@ -67,6 +67,12 @@ flutter:
     - assets/svgs/google.svg
     - assets/svgs/facebook.svg
     - assets/svgs/twitter.svg
+    - assets/images/categories_smartphones.jpg
+    - assets/images/categories_fashion.jpg
+    - assets/images/popularProd_controller.png
+    - assets/images/popularProd_gloves.png
+    - assets/images/popularProd_headset.png
+    - assets/images/popularProd_shorts.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
