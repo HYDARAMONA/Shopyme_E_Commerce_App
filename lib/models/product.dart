@@ -9,9 +9,9 @@ class ProductModel {
       required this.title,
       required this.description,
       required this.price,
-      this.rating = 0.0,
+      this.rating = 4.5,
       this.isFavorite = true,
-      this.isPopular = false});
+      this.isPopular = true});
 
   final List<String> images;
   final List<Color> colors;
@@ -25,16 +25,31 @@ class ProductModel {
 
 final List<ProductModel> demoProducts = [
   ProductModel(
-    images: ['assets/images/popularProd_controller.png'],
-    colors: [],
-    title: 'Wireless Controller for PS4™ and PS5™',
+    images: [
+      'assets/images/controller_1.png',
+      'assets/images/controller_2.png',
+      'assets/images/controller_3.png',
+      'assets/images/controller_4.png',
+    ],
+    colors: [
+      Colors.red,
+      Colors.purple,
+      Colors.lime,
+      Colors.white,
+    ],
+    title: 'Wireless Controller for PS4™', // and PS5™
     description:
-        'Wireless Controller for PS4™ and PS5™ gives you the best gaming experience from all aspects',
+        'Wireless Controller for PS4™ and PS5™ gives you the best gaming experience from all aspects Wireless Controller for PS4™ and PS5™ gives you the best gaming experience from all aspects',
     price: 64.99,
   ),
   ProductModel(
     images: ['assets/images/popularProd_shorts.png'],
-    colors: [],
+    colors: [
+      Colors.red,
+      Colors.purple,
+      Colors.lime,
+      Colors.white,
+    ],
     title: 'Nike™ casual shorts - For Men',
     description: 'Nike™ casual shorts for everyday use - good fabric quality',
     price: 50.99,
@@ -42,7 +57,12 @@ final List<ProductModel> demoProducts = [
   ),
   ProductModel(
     images: ['assets/images/popularProd_gloves.png'],
-    colors: [],
+    colors: [
+      Colors.red,
+      Colors.purple,
+      Colors.lime,
+      Colors.white,
+    ],
     title: 'Gloves XC Omega - black',
     description:
         'Wireless Controller for PS4™ and PS5™ gives you the best gaming experience from all aspects',
@@ -50,7 +70,12 @@ final List<ProductModel> demoProducts = [
   ),
   ProductModel(
     images: ['assets/images/popularProd_headset.png'],
-    colors: [],
+    colors: [
+      Colors.red,
+      Colors.purple,
+      Colors.lime,
+      Colors.white,
+    ],
     title: 'Logitech™ Headset',
     description:
         'Logitech™ Headset giving smooth gaming experience and high quality surround sound system',
