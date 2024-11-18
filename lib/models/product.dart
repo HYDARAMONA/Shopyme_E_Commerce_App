@@ -1,6 +1,7 @@
 //image//name//description//price//rating//is popular//is favorite//colors
 
 import 'package:flutter/material.dart';
+import 'package:uuid/uuid.dart';
 
 class ProductModel {
   ProductModel(
@@ -11,8 +12,10 @@ class ProductModel {
       required this.price,
       this.rating = 4.5,
       this.isFavorite = true,
-      this.isPopular = true});
+      this.isPopular = true})
+      : id = Uuid().v4();
 
+  final String id;
   final List<String> images;
   final List<Color> colors;
   final String title;

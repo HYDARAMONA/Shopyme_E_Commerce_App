@@ -1,3 +1,4 @@
+import 'package:e_commerce/screens/cart/cart_screen.dart';
 import 'package:e_commerce/screens/home/components/icon_button_with_countter.dart';
 import 'package:e_commerce/size_config.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,9 @@ class HomeHeader extends StatelessWidget {
           IconButtonWithCounter(
             icon: Icons.shopping_cart_outlined,
             number: 0,
-            onPress: () {},
+            onPress: () {
+              Navigator.pushNamed(context, CartScreen.routNamge);
+            },
           ),
           IconButtonWithCounter(
             icon: Icons.notifications_none,
