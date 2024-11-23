@@ -74,6 +74,16 @@ flutter:
     - assets/svgs/arrow-back-left-svgrepo-com.svg
     - assets/svgs/garbage.svg
     - assets/svgs/receipt.svg
+    - assets/svgs/camera.svg
+    - assets/svgs/profile.svg
+    - assets/svgs/arrow_forward.svg
+    - assets/svgs/bell.svg
+    - assets/svgs/log-out.svg
+    - assets/svgs/settings.svg
+    - assets/svgs/support.svg
+    - assets/svgs/favorite.svg
+    - assets/svgs/store.svg
+    - assets/svgs/message.svg
 
     - assets/images/categories_smartphones.jpg
     - assets/images/categories_fashion.jpg

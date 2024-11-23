@@ -123,7 +123,7 @@ class _OtpFormState extends State<OtpForm> {
           GlobalUseButton(
             text: 'Continue',
             function: () {
-              Navigator.pushNamed(context, HomeScreen.routNamge);
+              Navigator.pushNamed(context, HomeScreen.routeName);
             },
           ),
           SizedBox(height: SizeConfig.screenHeight! * 0.1),

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class ProductDetailsScreen extends StatelessWidget {
   ProductDetailsScreen({super.key});
 
-  static String routNamge = '/ProductDetails';
+  static String routeName = '/ProductDetails';
 
   @override
   Widget build(BuildContext context) {

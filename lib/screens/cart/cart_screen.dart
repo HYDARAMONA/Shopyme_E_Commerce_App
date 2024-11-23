@@ -8,7 +8,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
 
-  static String routNamge = '/Cart';
+  static String routeName = '/Cart';
 
   @override
   Widget build(BuildContext context) {

@@ -3,6 +3,7 @@ import 'package:e_commerce/components/global_form_error.dart';
 import 'package:e_commerce/components/global_suffix_icon_config.dart';
 import 'package:e_commerce/constants.dart';
 import 'package:e_commerce/screens/forgotPassword/forgot_pass_screen.dart';
+import 'package:e_commerce/screens/home/home_screen.dart';
 import 'package:e_commerce/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -61,7 +62,7 @@ class _SignInFormState extends State<SignInForm> {
               Spacer(),
               TextButton(
                   onPressed: () => Navigator.pushNamed(
-                      context, ForgotPasswordScreen.routNamge),
+                      context, ForgotPasswordScreen.routeName),
                   child: const Text('Forgot Password',
                       style: TextStyle(decoration: TextDecoration.underline))),
             ],
@@ -73,6 +74,7 @@ class _SignInFormState extends State<SignInForm> {
               function: () {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
+                  Navigator.pushNamed(context, HomeScreen.routeName);
                 }
               }),
         ],

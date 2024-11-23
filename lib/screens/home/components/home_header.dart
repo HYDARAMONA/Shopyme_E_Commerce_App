@@ -1,8 +1,8 @@
 import 'package:e_commerce/screens/cart/cart_screen.dart';
 import 'package:e_commerce/screens/home/components/icon_button_with_countter.dart';
+import 'package:e_commerce/screens/profile/profile_screen.dart';
 import 'package:e_commerce/size_config.dart';
 import 'package:flutter/material.dart';
-
 import 'package:e_commerce/screens/home/components/search_field.dart';
 
 class HomeHeader extends StatelessWidget {
@@ -22,13 +22,15 @@ class HomeHeader extends StatelessWidget {
             icon: Icons.shopping_cart_outlined,
             number: 0,
             onPress: () {
-              Navigator.pushNamed(context, CartScreen.routNamge);
+              Navigator.pushNamed(context, CartScreen.routeName);
             },
           ),
           IconButtonWithCounter(
             icon: Icons.notifications_none,
             number: 3,
-            onPress: () {},
+            onPress: () {
+              // Navigator.pushNamed(context, ProfileScreen.routeName);
+            },
           ),
         ],
       ),

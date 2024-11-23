@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class OtpScreen extends StatelessWidget {
   const OtpScreen({super.key});
 
-  static String routNamge = '/OTP_Verification';
+  static String routeName = '/OTP_Verification';
 
   @override
   Widget build(BuildContext context) {

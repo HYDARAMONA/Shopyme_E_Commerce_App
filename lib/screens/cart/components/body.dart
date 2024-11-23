@@ -27,7 +27,7 @@ class _BodyState extends State<Body> {
             padding:
                 EdgeInsets.symmetric(vertical: getProportionateScreenWidth(10)),
             child: Dismissible(
-              key: ValueKey('${cartItem.product.id}-$index'),
+              key: ValueKey(cartItem.id),
               direction: DismissDirection.endToStart,
               background: Container(
                 padding: EdgeInsets.symmetric(

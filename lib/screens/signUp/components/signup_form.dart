@@ -60,7 +60,7 @@ class _SignupFormState extends State<SignupForm> {
                       _formKey.currentState!.save();
                       print('vaaaaliiiiidaaaaateeeeeeddddddd');
                       Navigator.pushNamed(
-                          context, CompleteProfileScreen.routNamge);
+                          context, CompleteProfileScreen.routeName);
                     }
                   })
             ],

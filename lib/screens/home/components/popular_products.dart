@@ -33,7 +33,7 @@ class PopularProducts extends StatelessWidget {
                       product: demoProducts[index],
                       press: () {
                         Navigator.pushNamed(
-                            context, ProductDetailsScreen.routNamge,
+                            context, ProductDetailsScreen.routeName,
                             arguments: ProductDetailsArguments(
                                 arguments: demoProducts[index]));
                       },
